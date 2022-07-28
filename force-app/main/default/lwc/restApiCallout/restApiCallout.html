@@ -1,0 +1,30 @@
+<template>
+    <lightning-card>
+        <div class="slds-m-around_large">
+        <lightning-input type="search" onchange={fetchHandler} label="Search books"
+          value={query}></lightning-input>
+        </div>
+
+        <lightning-layout multiple-rows>
+            <template if:true={books}>
+                <template for:each={books.items} for:item="book">
+                    <lightning-layout-item key={book.id} padding="around-small" size="3">
+                        <div class="slds-box slds-m-around_large">
+                            <img src={book.volumeInfo.imageLinks.smallThumbnail} height="200px"/>
+                              <div class="slds-text-heading_small">
+                                  <strong>{book.volumeInfo.title}</strong>
+                              </div>
+                        </div>
+                        <div><strong> Published Date</strong>{book.volumeInfo.publishedDate}</div>
+                        <div><strong>Average Rating - </strong>{book.volumeInfo.averageRating}</div>
+
+                    </lightning-layout-item>
+
+                </template>
+
+            </template>
+
+        </lightning-layout>
+    </lightning-card>
+   
+</template>

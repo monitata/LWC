@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="Apex function : Contact details" icon-name="standard:contact">
+        <div class="slds-m-around_medium">
+<table class="slds-table slds-table_bordered">
+<thead>
+    <tr>
+        <th><strong>Name</strong></th>
+        <th><strong>Title</strong></th>
+        <th><strong>Email</strong></th>
+        <th><strong>Phone</strong></th>
+    </tr>
+</thead>
+<tbody>
+
+</tbody>
+<template for:each={contacts} for:item="contact">
+    <tr key={contact.cid}>
+        <td>{contact.cname}</td>
+        <td>{contact.ctitle}</td>
+        <td>{contact.cemail}</td>
+        <td>{contact.cphone}</td>
+</tr>
+</template>
+</table>
+</div>
+</lightning-card>
+
+    
+</template>

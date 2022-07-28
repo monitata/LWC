@@ -1,0 +1,40 @@
+<template>
+    <lightning-card title="Apex property:Contact detail" icon-name="standard:contact">
+        <div class="slds-m-around_large">
+            <table class="slds-table slds-table_bordered">
+    <thead>
+
+        <tr>
+            
+                <th><strong>Name</strong></th>
+                <th><strong>Title</strong></th>
+                <th><strong>Email</strong></th>
+                <th><strong>Phone</strong></th>
+            </tr>
+    </thead>
+    <tbody>
+
+        <template for:each={contacts.data} for:item="contact">
+<tr key={contact.Id}>
+<td>{contact.Name}</td>
+<td>{contact.Title}</td>
+<td>{contact.Email}</td>
+<td>{contact.Phone}</td>
+
+
+
+
+
+</tr>
+
+
+
+        </template>
+    </tbody>
+</table>
+
+</div>
+
+</lightning-card>
+
+</template>

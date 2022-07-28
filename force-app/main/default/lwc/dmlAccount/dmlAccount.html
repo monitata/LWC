@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title ="Account record form" icon-name="standard:Account">
+
+        <div class="slds-m-around_large">
+            <lightning-input label="Name" value={rec.Name} onchange={handleNameChange}></lightning-input>
+            <lightning-input label="Industry" value={rec.Industry}  onchange={handleIndChange}></lightning-input>
+            <lightning-input label="Phone" value={rec.Phone}  onchange={handlePhnChange}></lightning-input>
+
+<lightning-button label="save" onclick={handleClick}></lightning-button>
+
+        </div>
+
+    </lightning-card>
+    
+</template>

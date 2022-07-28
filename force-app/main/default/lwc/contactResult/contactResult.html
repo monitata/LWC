@@ -1,0 +1,44 @@
+<template>
+    <lightning-card title="Apex imperative call demo" icon-name="standard:contact">
+<div class="slds-m-around_medium">
+    <p>
+<lightning-button label="Get Contacts" onclick={retrieveContact}></lightning-button>
+
+    </p>
+    <table class="slds-table slds-table_bordered" if:true={contacts}>
+        <thead>
+            <tr>
+                 <th><strong>Name</strong></th>
+                <th><strong>Title</strong></th>
+                <th><strong>Email</strong></th>
+                <th><strong>Phone</strong></th>
+
+            
+            </tr>
+        </thead>
+        <tbody>
+<template for:each={contacts} for:item="contact">
+    <tr key={contact.Id}>
+        <td>{contact.Name}</td>
+        <td>{contact.Title}</td>
+        <td>{contact.Email}</td>
+        <td>{contact.Phone}</td>
+
+
+    </tr>
+
+
+</template>
+
+        </tbody>
+       
+
+
+    </table>
+
+
+
+</div>
+
+    </lightning-card>
+</template>
